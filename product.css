@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+/* Header css STARTS */
+header{
+    box-sizing: border-box;
+    max-width: 100%;
+}
+#topbar{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1% 8%;
+    box-shadow: 0 2px 5px #ccc;
+    background-color: white;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#left-menu{                 /* left-menu*/
+    display: flex;
+    align-items: center;
+}
+#logo{
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-right: 16px;
+}
+#logo span{
+    font-weight: 900;
+}
+.menu-items{
+    margin-left: 32px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#search-menu{               /* search-menu*/
+    width: 100%;
+    max-width: 400px;
+    background-color: aquamarine;
+    box-sizing: border-box;
+    display: flex;
+    padding: 10px 24px 8px 24px;
+    border: 1px solid rgb(245, 242, 242);
+    background-color: rgb(245, 242, 242);
+}
+#search-bar{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: rgb(245, 242, 242);
+    font-size: 14px;
+}
+#search-menu i{
+    color: #999;
+    font-size: 18px;
+    margin-right: 12px;
+}
+#right-menu{                /* right-menu*/
+    display: flex;
+    align-items: center;
+}
+#cart-wrapper{          
+    position: relative;
+    margin-right: 32px;
+}
+#cartA{
+    position: relative;
+}
+#added{
+    display: none;
+    position: absolute;
+    top: 10px;
+    width: 90px;
+    transform: translateX(-30%);
+    font-size: 16px; 
+    color: #009688;
+    font-weight: 700;
+    transition: display .2s;
+}
+#cart-increased{
+    color: red;
+}
+#cart-count{
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+    background-color: #009688;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+}
+#cart-wrapper{
+    font-size: 18px;
+    cursor: pointer;
+}
+#right-logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+/* Header css ENDS */
+/* Main css STARTS */
+main{
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 80vh;
+    margin-top: 100px;
+    padding-bottom: 8%;
+}
+#product-display{       /* product-display-section */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2% 8%;
+    display: flex;
+    min-height: 80vh;
+    background-color: blues;
+}
+#preview-div{
+    width: 40%;
+    padding-right: 8%;
+    box-sizing: border-box
+}
+#product-preview{
+    width: 100%;
+}
+#product-desc{
+    /* background-color: coral; */
+    width: 60%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+#product-title{
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0;
+}
+#product-brand{
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    opacity: 0.6;
+    margin: 0;
+    margin-top: 8px;
+}
+.heading{
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-top: 36px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+#product-desc h4:nth-child(3){
+    margin-bottom: 0px;
+}
+#para{
+    max-width: 500px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+}
+#product-price{
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #009688;
+    margin: 0;
+}
+#preview-images{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: start;
+    height: 100px;
+    background-color: #fff;
+}
+.images-card{
+    width: 60px;
+    height: 80px;
+    margin: 0 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 4px;
+}
+.images-card:hover{
+    box-shadow: 0px 0px 10px 0px lightgrey;
+}
+.images-card:first-of-type{
+    margin-left: 0px
+}
+.p-img{
+    width: 100%;
+    height: 100%;
+}
+.active{
+    border: 2px solid #009688;
+}
+#addCart-button{
+    width: 100%;
+    max-width: 170px;
+    background-color: #009688;
+    font-size: 18px;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    padding: 18px 36px;
+    border-radius: 6px;
+    margin-top: 36px;
+    font-weight: 600;
+    color: white;
+    transition: all 800ms ease-in-out;
+}
+.popup{
+    animation-name: cartAdd;
+    animation-duration: 800ms; 
+}
+@keyframes cartAdd{
+    0%{
+        transform: scale(1,1)
+    }
+    60%{
+        transform: scale(1.2,1.2)
+    }
+    100%{
+        transform: scale(1,1)
+    }
+}
+#edyoda-projects-logo{
+    width: 128px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+/* Main css ENDS */
+
+
+/* Footer css STARTS */
+footer{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #1c1b1e;
+    padding: 4% 8%;
+}
+#footer-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.footer-title{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+#footer-div div{
+    display: flex;
+    flex-direction: column;
+}
+#footer-div div a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-top: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    opacity: 0.8;
+}
+#footer-div div:first-of-type{
+    padding-right: 60px;
+}
+#footer-div div{
+    padding: 0px 60px;
+}
+/* Footer css ENDS */
+
+
+@media (max-width: 992px){
+    #search-menu{          
+        display: none;
+    }
+    #right-logo{
+        width: 50px;
+        height: 50px;
+    }
+    #edyoda-projects-logo{
+        width: 114px;
+        bottom: 30px;
+        right: 30px;
+    }
+    #product-display{      
+        padding: 2% 4%;
+        display: block;
+    }
+    #preview-div{
+        width: 80%;
+        padding-right: 20%;
+    }
+    #product-title{
+        font-size: 36px;
+    }
+    #product-brand{
+        font-size: 22px;
+    }
+    .heading{
+        font-size: 22px;
+    }
+    #para{
+        font-size: 18px;
+    }
+    footer{
+        box-sizing: border-box;
+        width: 100%;
+        background-color: #1c1b1e;
+        padding: 4% 0%;
+    }
+    #footer-div{
+        width: 100%;
+        display: block;
+    }
+    #footer-div div a{
+        margin-top: 8px;
+        letter-spacing: 0.5px;
+        opacity: 0.7;
+    }
+    #footer-div div p{
+        margin-bottom: 10px;
+        margin-top: 40px;
+    }
+    #footer-div div:first-of-type{
+        padding-right: 0px
+    }
+    #footer-div div{
+        padding: 0px 40px;
+    }
+}
+@media (max-width: 600px){
+    body{
+        width: 100%;
+        box-sizing: border-box;
+        /* background-color: coral; */
+    }
+    #topbar{
+        box-sizing: border-box;
+        padding: 3% 4%;
+        box-shadow: 0 2px 5px #ccc;
+    }
+    #left-menu{                
+        display: flex;
+        align-items: center;
+    }
+    #logo{
+        font-size: 28px;
+        margin-right: 10px;
+    }
+    #logo span{
+        font-weight: 700;
+    }
+    .menu-items{
+        display: none;
+    }
+    #search-menu{          
+        display: none;
+    }
+    #cart-wrapper{
+        font-size: 16px;
+    }
+    #right-logo{
+        width: 40px;
+        height: 40px;
+    }
+    main{
+        margin-top: 90px;
+    }
+    #product-display{      
+        padding: 2% 4%;
+        display: block;
+    }
+    #preview-div{
+        width: 70%;
+        padding-right: 20%;
+    }
+    #product-desc{
+        /* background-color: coral; */
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    #product-title{
+        font-size: 32px;
+        margin: 10px 0px
+    }
+    #product-brand{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .heading{
+        font-size: 20px;
+        margin: 12px 0px;
+    }
+    #para{
+        margin-top: 5px;
+        max-width: 100%;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+    #preview-images{
+        height: 100px;
+    }
+    .images-card{
+        width: 70px;
+        height: 80px;
+        margin: 0 8px;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 4px;
+    }
+    #addCart-button{
+        max-width: 150px;
+        font-size: 14px;
+    }
+    #edyoda-projects-logo{
+        width: 128px;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+    }
+    footer{
+        box-sizing: border-box;
+        width: 100%;
+        background-color: #1c1b1e;
+        padding: 4% 0%;
+    }
+    #footer-div{
+        width: 100%;
+        display: block;
+    }
+    #footer-div div a{
+        margin-top: 8px;
+        letter-spacing: 0.5px;
+        opacity: 0.7;
+    }
+    #footer-div div p{
+        margin-bottom: 10px;
+        margin-top: 40px;
+    }
+    #footer-div div:first-of-type{
+        padding-right: 0px
+    }
+    #footer-div div{
+        padding: 0px 40px;
+    }
+}
+@media (max-width: 400px){
+    #logo{
+        font-size: 24px;
+    }
+    .menu-items{
+        display: none;
+    }
+    #edyoda-projects-logo{
+        width: 90px;
+        bottom: 10px;
+        right : 10px;
+    }
+    #preview-div{
+        width: 80%;
+        padding-right: 0%;
+    }
+    #product-title{
+        font-size: 22px;
+    }
+}

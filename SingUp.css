@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+body{
+    background: black;
+    background-image: linear-gradient(90deg, black, grey, black);
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+header{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1% 8%;
+    box-shadow: 0 2px 5px #ccc;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white
+}
+#logo{
+    font-size: 42px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-right: 16px;
+}
+#logo span{
+    color: black;
+    font-weight: 900;
+}
+a{
+    color: black;
+    text-decoration: none;
+    margin: 0 auto;
+}
+p{
+    margin: 0;
+    text-align: center;
+}
+main{
+    margin-top: 85px;
+}
+#signup{
+    font-size: 48px;
+    text-align: center;
+    padding-top: 30px;
+    letter-spacing: 1px;
+    color: rgb(112, 8, 13)
+}
+form{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 0px 50px 0px black;
+    margin: 0px auto;
+    margin-bottom: 0px;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 50px 20px;
+    min-height: 540px;
+    position: relative;
+}
+form p {
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 24px;
+    /* padding-top: 50px; */
+    margin-bottom: 20px;
+    font-size: 500;
+    margin-top: 30px;
+}
+form input{
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    border: none;
+    box-shadow: 1px 1px 5px grey;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+form p:nth-of-type(1){
+    margin-top: 0px;
+}
+#login-button{
+    display: block;
+    width: 150px;
+    margin-left: auto;
+    margin-top: 50px;
+    font-size: 22px;
+    background-color: rgb(25, 94, 25);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#login{
+    position: absolute;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(25, 94, 25);
+    cursor: pointer;
+    user-select: none;
+    cursor: pointer;
+}
+@media (max-width: 600px){
+    header{
+        padding: .5% 0%;
+    }
+    #logo{
+        font-size: 36px;
+    }
+    main{
+        margin-top: 60px;
+    }
+    #signup{
+        font-size: 36px;
+    }
+    form p {
+        font-size: 20px;
+    }
+    form input{
+        padding: 8px;
+    }
+    #login-button{
+        width: 140px;
+        font-size: 18px;
+        color: white;
+    }
+}
+@media (max-width: 400px){
+    header{
+        padding: 2% 0%;
+    }
+    #logo{
+        font-size: 32px;
+    }
+    main{
+        margin-top: 50px;
+    }
+    #signup{
+        font-size: 30px;
+    }
+    form{
+        max-width: 360px;
+    }
+}
